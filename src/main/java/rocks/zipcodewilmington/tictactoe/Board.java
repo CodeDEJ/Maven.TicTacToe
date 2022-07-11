@@ -24,6 +24,10 @@ public class Board {
             return true;
         } else if (xOxO[0][2].equals('X') && (xOxO[1][2].equals('X') && (xOxO[2][2].equals('X')))) {
             return true;
+        } else if (xOxO[0][0].equals('X') && (xOxO[1][1].equals('X') && (xOxO[2][2].equals('X')))) {
+            return true;
+        } else if (xOxO[0][2].equals('X') && (xOxO[1][1].equals('X') && (xOxO[2][0].equals('X')))) {
+            return true;
         } else {
             return false;
         }
@@ -42,6 +46,10 @@ public class Board {
         } else if (xOxO[0][1].equals('O') && (xOxO[1][1].equals('O') && (xOxO[2][1].equals('O')))) {
             return true;
         } else if (xOxO[0][2].equals('O') && (xOxO[1][2].equals('O') && (xOxO[2][2].equals('O')))) {
+            return true;
+        } else if (xOxO[0][0].equals('O') && (xOxO[1][1].equals('O') && (xOxO[2][2].equals('O')))) {
+            return true;
+        } else if (xOxO[0][2].equals('O') && (xOxO[1][1].equals('O') && (xOxO[2][0].equals('O')))) {
             return true;
         }else{
             return false;
@@ -62,7 +70,7 @@ public class Board {
         } else if (isInFavorOfO() == true) {
             return "O";
         }else{
-            return "tie";
+            return "";
         }
 
     }
